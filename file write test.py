@@ -36,3 +36,5 @@ with open('test.json') as text:
 
 print(f'json read: {new_stuff}')
 print(new_stuff_dict)
+
+print('cool')
