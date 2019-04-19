@@ -5,4 +5,3 @@ test = '1' \
 
 print(test)
 
-print('test branch 1')
