@@ -10,8 +10,11 @@ vlan = input('Vlan ID: ')
 print('Connecting to device...')
 
 # establish connection to device
+userName = os.environ.get('TACACS_USER')  # creds stored as environ variables
+password = os.environ.get('TACACS_PASS')  # creds stored as environ variables
 
-netConn = ConnectHandler(device_type='cisco_ios', ip=devname, username='dsuida', password='Peanut1234')
+
+netConn = ConnectHandler(device_type='cisco_ios', ip=devname, username=userName, password=pasword)
 
 # enter enable mode
 netConn.enable()

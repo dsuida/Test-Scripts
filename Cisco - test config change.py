@@ -10,8 +10,11 @@ from netmiko import ConnectHandler
 fromVlan = input('From VLAN: ')
 toVlan = input('To VLAN: ')
 
+userName = os.environ.get('TACACS_USER')  # creds stored as environ variables
+password = os.environ.get('TACACS_PASS')  # creds stored as environ variables
+
 # establish connection to device
-netConn = ConnectHandler(device_type='cisco_ios', ip='cpr-dga-temp', username='dsuida', password='Peanut1234')
+netConn = ConnectHandler(device_type='cisco_ios', ip='cpr-dga-temp', username=useName, password=password)
 
 print('\nConnection established')
 print('\nGathering data...\n')

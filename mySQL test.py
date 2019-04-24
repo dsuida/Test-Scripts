@@ -6,7 +6,7 @@ import sys
 
 conn_str = {
     'user': 'Python',
-    'password': 'Ferret11',
+    'password': 'password',
     'host': '192.168.1.195',
     'database': 'dougtest',
     'raise_on_warnings': True

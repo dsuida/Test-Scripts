@@ -9,7 +9,10 @@ import re
 from netmiko import ConnectHandler
 
 # establish conection to device
-net_conn = ConnectHandler(device_type='cisco_ios', ip='172.20.96.3', username='dsuida', password='Peanut1234')
+userName = os.environ.get('TACACS_USER')  # creds stored as environ variables
+password = os.environ.get('TACACS_PASS')  # creds stored as environ variables
+
+net_conn = ConnectHandler(device_type='cisco_ios', ip='172.20.96.3', username=userName, password=password)
 
 # enter enable mode
 net_conn.enable()
