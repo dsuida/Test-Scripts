@@ -1,4 +1,3 @@
-#! Python3
 
 '''Testing config changes on hard coded test switch.  Simply finds any
 interfaces selected vlan and puts them in new vlan'''

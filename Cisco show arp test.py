@@ -1,5 +1,3 @@
-#! Python3
-
 
 import re
 from netmiko import ConnectHandler

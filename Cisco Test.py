@@ -1,4 +1,3 @@
-#! Python3
 
 ''' This program is to test netmiko by connecting to a Cisco switch, pulling in the results of the show interfaces
 status command and then parse out the connected interfaces and place them in a list.'''
