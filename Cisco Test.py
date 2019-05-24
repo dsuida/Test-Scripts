@@ -21,7 +21,7 @@ results = net_conn.find_prompt() + '\n'
 results += net_conn.send_command('show int status', delay_factor=2)
 net_conn.disconnect()
 
-#split the resulting string into a list based on new line
+# split the resulting string into a list based on new line
 results = results.split('\n')
 
 del results[0:3]
@@ -30,10 +30,10 @@ interfaces = []
 
 # loop thru the results list and parse out the connected interfaces and add them to the interfaces list
 for i in range(0, len(results)):
-    if 'connected' in results[i] and 'Po' not in results[i] :
-        interfaces.append(re.match('^\w*\d/\d/\d*',results[i]))
+    if 'connected' in results[i] and 'Po' not in results[i]:
+        interfaces.append(re.match('^\w*\d/\d/\d*', results[i]))
 
-print('There are '+ str(len(interfaces)) + ' interfaces up.  They are:')
+print('There are ' + str(len(interfaces)) + ' interfaces up.  They are:')
 for i in range(0, len(interfaces)):
     print(interfaces[i].group())
 
